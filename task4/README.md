@@ -12,6 +12,7 @@ write a shell script to
 Assumptions:
 1. DB user crednetials are passed in the script itself.
 2. Connectivity to the remote db host is valid.
+3. No SSL connection assumed with DB
 
 
 ```sh
