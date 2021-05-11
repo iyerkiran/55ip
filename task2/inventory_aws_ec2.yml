@@ -1,0 +1,18 @@
+# Short snippet of dynamic inventory
+plugin: aws_ec2
+boto_profile: aws_profile
+regions:
+  - us-east-1
+filters:
+  # All dev autoscaling group hosts
+  tag:env: dev_asg
+  # Filter running instances
+  instance-state-name : running
+
+keyed_groups:
+  # Add hosts to tag_Name_Value groups for each Name/Value tag pair
+  - prefix: env
+    key: tags['env']
+  # Easier to group hosts in ASG as instance type will be the same
+  - prefix: instance_type
+    key: instance_type
