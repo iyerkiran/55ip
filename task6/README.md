@@ -4,7 +4,7 @@
 Write a script to identify AWS security credentials older than 90 day & renew them.
 
 ## Proposed Solution:
-Below is the code used, however it is NOT 100% functional. But an overall structure may provide us and idea.
+Below is the code used, however it is NOT 100% functional. But an overall structure may provide us an idea.
 
 ```sh
 python3 rotate-iam.py
